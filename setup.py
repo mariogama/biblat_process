@@ -21,5 +21,5 @@ setup(
     install_requires=[],
     tests_require=[],
     dependency_links=[],
-    test_suite=''
+    test_suite='tests.discover_suite'
 )
