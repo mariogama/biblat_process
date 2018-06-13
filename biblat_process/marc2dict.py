@@ -25,9 +25,11 @@ class Marc2Dict:
         """
         for db_file in self.config['db_files']:
             db_file = os.path.join(self.config['local_path'], db_file)
-            with gzip.open(db_file, 'rb') as process_file:
+            with gzip.open(db_file, mode='rt',
+                           encoding='utf-8', errors='ignore') as process_file:
                 for line in process_file:
-                    yield line
+                    # Eliminamos el salto de linea al final de la cadena
+                    yield line.strip()
 
     def get_dict(self):
         """Regresar un registro MARC en formato de diccionario"""
@@ -35,9 +37,6 @@ class Marc2Dict:
         current = ""
         z = 0
         for line in self.get_lines():
-            # Eliminamos el salto de linea al final de la cadena
-            line = str(line.strip(), 'utf-8')
-            # Si es la ultima linea regresamos el registro
             if line == "EOF":
                 return_dict = marc_dict
                 marc_dict = {}
