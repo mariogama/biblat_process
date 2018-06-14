@@ -1,0 +1,141 @@
+{
+  "FMT": [
+    {
+      "#": "BK"
+    }
+  ],
+  "LDR": [
+    {
+      "#": "00000nab^a2200000zi^4500"
+    }
+  ],
+  "008": [
+    {
+      "e": "Barbados"
+    }
+  ],
+  "022": [
+    {
+      "a": "1028-8813"
+    }
+  ],
+  "035": [
+    {
+      "a": "CLA01000242983"
+    }
+  ],
+  "036": [
+    {
+      "a": "0603"
+    }
+  ],
+  "041": [
+    {
+      "a": "Inglés"
+    }
+  ],
+  "120in100": true,
+  "100": [
+    {
+      "a": [
+        "Archibald, Xiomara",
+        "Lewis-Bynoe, Denny",
+        "Moore, Winston"
+      ],
+      "z": "(1)"
+    }
+  ],
+  "120": [
+    {
+      "u": "Central Bank of Barbados",
+      "v": "Research Department",
+      "w": "Bridgetown",
+      "x": "Barbados",
+      "z": "(1)"
+    }
+  ],
+  "222": [
+    {
+      "a": "Journal of Eastern Caribbean Studies"
+    }
+  ],
+  "245": [
+    {
+      "a": "Barriers To Starting A Business in Barbados"
+    }
+  ],
+  "260": [
+    {
+      "c": "2005"
+    }
+  ],
+  "300": [
+    {
+      "a": "V30",
+      "b": "N3",
+      "c": "sep",
+      "e": "P1-27"
+    }
+  ],
+  "546": [
+    {
+      "a": "Inglés"
+    }
+  ],
+  "504": [
+    {
+      "a": "Refs"
+    }
+  ],
+  "590": [
+    {
+      "a": "Artículo",
+      "b": "Analítico"
+    }
+  ],
+  "698": [
+    {
+      "a": "Ciencia política"
+    }
+  ],
+  "650": [
+    {
+      "a": "Economía"
+    },
+    {
+      "a": "Administración y contaduría"
+    }
+  ],
+  "653": [
+    {
+      "a": "Empresas"
+    },
+    {
+      "a": "Administración pública"
+    },
+    {
+      "a": "Inversiones"
+    },
+    {
+      "a": "Trámites burocráticos"
+    },
+    {
+      "a": "Burocracia"
+    },
+    {
+      "a": "Simplificación administrativa"
+    },
+    {
+      "a": "Emprendedores"
+    },
+    {
+      "a": "Barbados"
+    }
+  ],
+  "852": [
+    {
+      "u": "http://biblat.unam.mx/es/bibliometria/indicadores-por-revista/j#journal-of-eastern-caribbean-studies",
+      "y": "Indicadores Journal of Eastern Caribbean Studies"
+    }
+  ]
+}

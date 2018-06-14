@@ -148,3 +148,20 @@ class TestMarc2Dict(unittest.TestCase):
 
         self.assertDictEqual(marc_dict_expected, marc_dicts[0])
         self.assertEqual(1, len(marc_dicts))
+
+    def test_subfield_dup(self):
+        """Prueba para verificar cuando un sub-campo esta duplicado"""
+        self.maxDiff = None
+        self.config['db_files'] = 'test_subfield_dup.txt.gz'
+        marc2dict = Marc2Dict(self.config)
+        marc_dicts = []
+
+        for marc_dict in marc2dict.get_dict():
+            marc_dicts.append(marc_dict)
+
+        with open(os.path.join(self.test_files_path, 'test_subfield_dup.json'),
+                  encoding='utf-8') as subfield_dup_json:
+            marc_dict_expected = json.load(subfield_dup_json)
+
+        self.assertDictEqual(marc_dict_expected, marc_dicts[0])
+        self.assertEqual(1, len(marc_dicts))
