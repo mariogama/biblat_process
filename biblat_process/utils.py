@@ -1,12 +1,14 @@
 #coding: utf-8
 import os
 import weakref
+import logging
 
 try:
     from configparser import ConfigParser
 except ImportError:
     from ConfigParser import ConfigParser
 
+logger = logging.getLogger(__name__)
 
 class SingletonMixin(object):
     """
