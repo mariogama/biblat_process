@@ -1,0 +1,272 @@
+[
+  {
+    "FMT": [
+      {
+        "#": "BK"
+      }
+    ],
+    "LDR": [
+      {
+        "#": "00000nab^a2200000zi^4500"
+      }
+    ],
+    "008": [
+      {
+        "e": "México"
+      }
+    ],
+    "022": [
+      {
+        "a": "0071-1675"
+      }
+    ],
+    "035": [
+      {
+        "a": "CLA01000000001"
+      }
+    ],
+    "036": [
+      {
+        "a": "9421150"
+      }
+    ],
+    "041": [
+      {
+        "a": "Español"
+      }
+    ],
+    "100": [
+      {
+        "a": "León-Portilla, Miguel",
+        "z": "(1)"
+      }
+    ],
+    "120": [
+      {
+        "z": "(1)",
+        "u": "Universidad Nacional Autónoma de México",
+        "v": "Instituto de Investigaciones Históricas",
+        "w": "México, Distrito Federal",
+        "x": "México"
+      }
+    ],
+    "222": [
+      {
+        "a": "Estudios de cultura náhuatl"
+      }
+    ],
+    "245": [
+      {
+        "a": "Encuentro de dos mundos"
+      }
+    ],
+    "260": [
+      {
+        "c": "1992"
+      }
+    ],
+    "300": [
+      {
+        "b": "N22",
+        "e": "P15-27"
+      }
+    ],
+    "504": [
+      {
+        "a": "11"
+      }
+    ],
+    "590": [
+      {
+        "a": "Ensayo",
+        "b": "Histórico, socioeconómico"
+      }
+    ],
+    "698": [
+      {
+        "a": "Antropología"
+      }
+    ],
+    "650": [
+      {
+        "a": "Historia"
+      },
+      {
+        "a": "Antropología"
+      }
+    ],
+    "653": [
+      {
+        "a": "Historia social"
+      },
+      {
+        "a": "Historia de la cultura"
+      },
+      {
+        "a": "Filosofía de la historia"
+      },
+      {
+        "a": "Antropología de la cultura"
+      },
+      {
+        "a": "Etnología y antropología social"
+      },
+      {
+        "a": "1492"
+      },
+      {
+        "a": "América"
+      },
+      {
+        "a": "Indígenas"
+      },
+      {
+        "a": "Quinto centenario"
+      },
+      {
+        "a": "Descubrimiento de América"
+      }
+    ],
+    "852": [
+      {
+        "u": "http://biblat.unam.mx/es/bibliometria/indicadores-por-revista/e#estudios-de-cultura-nahuatl",
+        "y": "Indicadores Estudios de cultura náhuatl"
+      }
+    ],
+    "OWN": [
+      {
+        "a": "PUBLIC"
+      }
+    ]
+  },
+  {
+    "FMT": [
+      {
+        "#": "BK"
+      }
+    ],
+    "LDR": [
+      {
+        "#": "00000nab^a2200000zi^4500"
+      }
+    ],
+    "008": [
+      {
+        "e": "México"
+      }
+    ],
+    "022": [
+      {
+        "a": "0071-1675"
+      }
+    ],
+    "035": [
+      {
+        "a": "CLA01000000002"
+      }
+    ],
+    "036": [
+      {
+        "a": "9420030"
+      }
+    ],
+    "041": [
+      {
+        "a": "Español"
+      }
+    ],
+    "100": [
+      {
+        "a": "Johansson, Patrick"
+      }
+    ],
+    "222": [
+      {
+        "a": "Estudios de cultura náhuatl"
+      }
+    ],
+    "245": [
+      {
+        "a": "Yaocuicatl : cantos de guerra y guerra de cantos"
+      }
+    ],
+    "260": [
+      {
+        "c": "1992"
+      }
+    ],
+    "300": [
+      {
+        "b": "N22",
+        "e": "P29-43"
+      }
+    ],
+    "590": [
+      {
+        "a": "Ensayo",
+        "b": "Histórico, descriptivo"
+      }
+    ],
+    "504": [
+      {
+        "a": "4"
+      }
+    ],
+    "698": [
+      {
+        "a": "Antropología"
+      }
+    ],
+    "650": [
+      {
+        "a": "Literatura y lingüística"
+      },
+      {
+        "a": "Antropología"
+      }
+    ],
+    "653": [
+      {
+        "a": "Sociolingüística"
+      },
+      {
+        "a": "Antropología lingüística"
+      },
+      {
+        "a": "Antropología de la cultura"
+      },
+      {
+        "a": "Etnología y antropología social"
+      },
+      {
+        "a": "México"
+      },
+      {
+        "a": "Aztecas"
+      },
+      {
+        "a": "Yaocuicatl"
+      },
+      {
+        "a": "Lingüística"
+      },
+      {
+        "a": "Canto-guerra"
+      },
+      {
+        "a": "Ritual magico"
+      }
+    ],
+    "852": [
+      {
+        "u": "http://biblat.unam.mx/es/bibliometria/indicadores-por-revista/e#estudios-de-cultura-nahuatl",
+        "y": "Indicadores Estudios de cultura náhuatl"
+      }
+    ],
+    "OWN": [
+      {
+        "a": "PUBLIC"
+      }
+    ]
+  }
+]
