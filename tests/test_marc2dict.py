@@ -96,3 +96,20 @@ class TestMarc2Dict(unittest.TestCase):
             self.assertEqual(2, len(marc_dicts))
             self.assertDictEqual(marc_dicts_expected[0], marc_dicts[0])
             self.assertDictEqual(marc_dicts_expected[1], marc_dicts[1])
+
+    def test_120_as_100(self):
+        """Prueba para verificar etiqueta 120 como 100"""
+        self.maxDiff = None
+        self.config['db_files'] = 'test_120_as_100.txt.gz'
+        marc2dict = Marc2Dict(self.config)
+        marc_dicts = []
+
+        for marc_dict in marc2dict.get_dict():
+            marc_dicts.append(marc_dict)
+
+        with open(os.path.join(self.test_files_path, 'test_120_as_100.json'),
+                  encoding='utf-8') as json_120_as_100:
+            marc_dict_expected = json.load(json_120_as_100)
+
+        self.assertDictEqual(marc_dict_expected, marc_dicts[0])
+        self.assertEqual(1, len(marc_dicts))
