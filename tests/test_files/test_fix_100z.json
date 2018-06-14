@@ -1,0 +1,139 @@
+{
+  "FMT": [
+    {
+      "#": "BK"
+    }
+  ],
+  "LDR": [
+    {
+      "#": "00000nab^a2200000zi^4500"
+    }
+  ],
+  "008": [
+    {
+      "e": "México"
+    }
+  ],
+  "022": [
+    {
+      "a": "0041-8935"
+    }
+  ],
+  "035": [
+    {
+      "a": "CLA01000113523"
+    }
+  ],
+  "036": [
+    {
+      "a": "9121017"
+    }
+  ],
+  "041": [
+    {
+      "a": "Español"
+    }
+  ],
+  "100": [
+    {
+      "a": "Jerez, C",
+      "z": "(1)"
+    }
+  ],
+  "120": [
+    {
+      "z": "(1)",
+      "u": "Universidad Centroamericana",
+      "w": "Managua",
+      "x": "Nicaragua"
+    }
+  ],
+  "222": [
+    {
+      "a": "Universidades (México, D.F.)"
+    }
+  ],
+  "245": [
+    {
+      "a": "Política y educación superior. Seminario Universidad y proyecto nacional, México, 1988"
+    }
+  ],
+  "260": [
+    {
+      "c": "1988"
+    }
+  ],
+  "300": [
+    {
+      "d": "Anuario",
+      "e": "P367-386"
+    }
+  ],
+  "590": [
+    {
+      "a": "Conferencia o discurso",
+      "b": "Analítico"
+    }
+  ],
+  "504": [
+    {
+      "a": "2"
+    }
+  ],
+  "698": [
+    {
+      "a": "Educación"
+    }
+  ],
+  "650": [
+    {
+      "a": "Educación"
+    },
+    {
+      "a": "Sociología"
+    },
+    {
+      "a": "Religión"
+    }
+  ],
+  "653": [
+    {
+      "a": "Educación superior"
+    },
+    {
+      "a": "Ideología"
+    },
+    {
+      "a": "Movimientos sociopolíticos"
+    },
+    {
+      "a": "Cristianismo"
+    },
+    {
+      "a": "Nicaragua"
+    },
+    {
+      "a": "Conciencia política"
+    },
+    {
+      "a": "Revolución"
+    },
+    {
+      "a": "Politización"
+    },
+    {
+      "a": "Universidades"
+    }
+  ],
+  "852": [
+    {
+      "u": "http://biblat.unam.mx/es/bibliometria/indicadores-por-revista/u#universidades-mexico-d-f",
+      "y": "Indicadores Universidades (México, D.F.)"
+    }
+  ],
+  "OWN": [
+    {
+      "a": "PUBLIC"
+    }
+  ]
+}

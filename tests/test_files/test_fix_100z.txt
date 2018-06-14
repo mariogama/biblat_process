@@ -1,0 +1,31 @@
+000113523 FMT   L BK
+000113523 LDR   L 00000nab^a2200000zi^4500
+000113523 008   L $$eMéxico
+000113523 022   L $$a0041-8935
+000113523 035   L $$aCLA01000113523
+000113523 036   L $$a9121017
+000113523 041   L $$aEspañol
+000113523 100   L $$aJerez, C.$$a(1)
+000113523 120   L $$z(1)$$uUniversidad Centroamericana,$$wManagua.$$xNicaragua
+000113523 222   L $$aUniversidades (México, D.F.)
+000113523 245   L $$aPolítica y educación superior. Seminario Universidad y proyecto nacional, México, 1988
+000113523 260   L $$c1988
+000113523 300   L $$dAnuario$$eP367-386
+000113523 590   L $$aConferencia o discurso.$$bAnalítico
+000113523 504   L $$a2
+000113523 698   L $$aEducación
+000113523 650   L $$aEducación
+000113523 650   L $$aSociología
+000113523 650   L $$aReligión
+000113523 653   L $$aEducación superior
+000113523 653   L $$aIdeología
+000113523 653   L $$aMovimientos sociopolíticos
+000113523 653   L $$aCristianismo
+000113523 653   L $$aNicaragua
+000113523 653   L $$aConciencia política
+000113523 653   L $$aRevolución
+000113523 653   L $$aPolitización
+000113523 653   L $$aUniversidades
+000113523 852   L $$uhttp://biblat.unam.mx/es/bibliometria/indicadores-por-revista/u#universidades-mexico-d-f$$yIndicadores Universidades (México, D.F.)
+000113523 OWN   L $$aPUBLIC
+EOF
