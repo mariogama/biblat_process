@@ -16,7 +16,6 @@ class Marc2Dict:
         self.record_pattern = re.compile(r'(^\d{9})\s(.{3})(.{2})\sL\s(.+?$)')
         self.el_val_pattern = re.compile(r'\$\$([a-zA-Z0-9])')
         self.sequence_pattern = re.compile(r"^\(([0-9]+?)\)$")
-        print(self.config)
 
     def get_lines(self):
         """
@@ -37,7 +36,9 @@ class Marc2Dict:
         current = ""
         z = 0
         for line in self.get_lines():
-            if line == "EOF":
+            if line == 'EOF':
+                z = 0
+                current = ''
                 return_dict = marc_dict
                 marc_dict = {}
                 yield return_dict
@@ -53,12 +54,12 @@ class Marc2Dict:
                 valor = result.group(4)
                 # Evaluamos si es un registro diferente para regresar el
                 # registro
-                if current != "" and sistema != current:
+                if current != '' and sistema != current:
                     z = 0
                     return_dict = marc_dict
                     marc_dict = {}
                     yield return_dict
-                '''Asignamos el valor del registro actual'''
+                # Asignamos el valor del registro actual
                 current = sistema
                 # Inicializamos un diccionario para almacenar los elementos
                 # de la etiqueta
@@ -69,7 +70,7 @@ class Marc2Dict:
                 if '' in values:
                     values.remove('')
                 for key, val in zip(values[::2], values[1::2]):
-                    val = re.sub("[.,]$", "", val)
+                    val = re.sub('[.,]$', '', val)
                     if etiqueta == '100' and key in subtag \
                             and self.sequence_pattern.match(val) is not None:
                         key = 'z'
