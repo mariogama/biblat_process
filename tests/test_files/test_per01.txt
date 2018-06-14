@@ -1,0 +1,58 @@
+000339138 FMT   L BK
+000339138 LDR   L 00000nab^a2200000zi^4500
+000339138 008   L $$eBrasil
+000339138 022   L $$a0031-1049
+000339138 035   L $$aPER01000339138
+000339138 036   L $$a1112
+000339138 041   L $$aInglés
+000339138 100   L $$aOppenheimer, Marina$$z(1)$$6marinaopp@yahoo.com.br
+000339138 100   L $$aSilveira, Luis Fabio$$z(1)$$6lfsilvei@usp.br
+000339138 120   L $$z(1)$$uUniversidade de Sao Paulo,$$vMuseu de Zoologia,$$wSao Paulo.$$xBrasil
+000339138 222   L $$aPapeis avulsos de zoologia
+000339138 245   L $$aA taxonomic review of the Dark-winged Trumpeter Psophia viridis (Aves: Gruiformes: Psophiidae)
+000339138 260   L $$c2008
+000339138 300   L $$aV48$$bN29$$eP547-555
+000339138 504   L $$aRefs.
+000339138 520   L $$pOs jacamins-de-costas-verdes, Psophia viridis (Gruiformes, Psophiidae) são endêmicos da Amazônia brasileira e contam, atualmente, com três subespécies reconhecidas: Psophia viridis viridis Spix, 1825; Psophia v. dextralis Conover, 1934, e Psophia v. obscura Pelzeln, 1857, além de P. v. interjecta Griscom & Greenway, 1937, cuja validade tem sido questionada por diversos autores. Estes táxons distribuem-se alopatricamente ao sul do rio Amazonas, embora os limites precisos de suas distribuições sejam ainda pouco conhecidos. Os táxons deste complexo nunca passaram por uma revisão taxonômica, e o presente trabalho teve como objetivos testar a validade dos mesmos. Com base no Conceito Filogenético de Espécie, os caracteres morfométricos e de colorido da plumagem foram analisados, além de refinar a distribuição geográfica dos táxons do complexo. Foram examinados 108 espécimes procedentes de 41 localidades, incluindo todos os tipos, e foram considerados também os registros confiáveis de literatura para delimitar-se a distribuição geográfica. Os dados morfométricos não indicaram diferenças significativas entre os táxons, não apontando também qualquer dimorfismo sexual. Entretanto, a análise dos caracteres de plumagem evidenciou padrões consistentes e distintos para cada um dos táxons, exceto para P. v. interjecta, cujos caracteres indicados pelos autores como diagnósticos são resultado de variação individual. Não foi observada variação clinal ou sinal de intergradação entre estes táxons, mesmo nas regiões próximas às cabeceiras dos grandes rios amazônicos, onde supostamente as populações poderiam entrar em contato. Sugere-se que as subespécies correntemente aceitas sejam elevadas ao nível de espécie, a saber: Psophia viridis Spix, 1825, que ocorre no interflúvio Madeira-Tapajós; P. dextralis Conover, 1934, encontrado no interflúvio Tapajós-Tocantins, e P. obscura Pelzeln, 1857, que distribui-se da margem direi
+000339138 520   L $$iThe Dark-winged Trumpeter, Psophia viridis (Gruiformes, Psophiidae) is a Brazilian endemic species and includes three subspecies: Psophia viridis viridis Spix, 1825; Psophia v. dextralis Conover, 1934, and Psophia v. obscura Pelzeln, 1857, as well as P. v. interjecta Griscom & Greenway, 1937, whose validity has been questioned by several authors. These taxa are allopatric in distribution along the south of the Amazon River, although the precise limits of their distribution still remain unknown. This complex has never been taxonomically reviewed and this work aims to test the validity of its taxa based on the Phylogenetic Species Concept. Morphometrical characters and plumage colour patterns were analyzed, and the distribution of the taxa was also revised. In this study, 108 specimens from 41 localities were examined (all types included), with each reliable literature-based locality being included in order to delimit the geographical distribution of the complex. Morphometrical data did not point out significant differences between the taxa, also showing no sexual dimorphism among them. Meanwhile, plumage characters showed consistent and distinct patterns for each of the taxa, except for P. v. interjecta, whose features indicated by authors as diagnosable are the result of individual variation. No clinal variation or intergradation were observed, even at regions close to the rivers headwaters, where supposedly populations could be in contact. It is suggested that the currently accepted subspecies be elevated to the species level, such as: Psophia viridis Spix, 1825, distributed in the Madeira-Tapajós interfluvium, P. dextralis, found in the Tapajós-Tocantins interfluvium, and P. obscura, which occurs from the right bank of the Tocantins River to the west of the State of Maranhão.
+000339138 546   L $$aPortugués, inglés
+000339138 590   L $$aMonografía.$$bDescriptivo
+000339138 698   L $$aBiología
+000339138 650   L $$aBiología
+000339138 653   L $$aAves
+000339138 653   L $$aTaxonomía y sistemática
+000339138 653   L $$aGruiformes
+000339138 653   L $$aPsophiidae
+000339138 653   L $$aPsophia viridis
+000339138 653   L $$aMorfología
+000339138 653   L $$aMuseos
+000339138 653   L $$aBrasil
+000339138 654   L $$aBiology
+000339138 654   L $$aBirds
+000339138 654   L $$aTaxonomy and systematics
+000339138 654   L $$aGruiformes
+000339138 654   L $$aPsophiidae
+000339138 654   L $$aPsophia viridis
+000339138 654   L $$aMorphology
+000339138 654   L $$aMuseums
+000339138 654   L $$aBrazil
+000339138 852   L $$uhttp://biblat.unam.mx/es/bibliometria/indicadores-por-revista/p#papeis-avulsos-de-zoologia$$yIndicadores Papeis avulsos de zoologia
+000339138 856   L $$uhttp://www.scielo.br/scielo.php?script=sci_arttext&pid=S0031-10492009004100001&lng=pt&nrm=iso&tlng=en$$yTexto completo (Ver HTML)
+000339138 CAT   L $$aROSA$$b10$$c20111209$$lPER01$$h1913
+000339138 CAT   L $$c20120823$$lPER01$$h0152
+000339138 CAT   L $$c20121110$$lPER01$$h1009
+000339138 CAT   L $$c20121115$$lPER01$$h1017
+000339138 CAT   L $$c20130113$$lPER01$$h1520
+000339138 CAT   L $$c20130404$$lPER01$$h0453
+000339138 CAT   L $$c20130530$$lPER01$$h1000
+000339138 CAT   L $$aROSA$$b10$$c20140430$$lPER01$$h1012
+000339138 CAT   L $$c20140926$$lPER01$$h1506
+000339138 CAT   L $$c20150430$$lPER01$$h1628
+000339138 CAT   L $$c20151201$$lPER01$$h0827
+000339138 CAT   L $$aSYSUPDATE$$b$$c20160303$$lPER01$$h1141
+000339138 CAT   L $$aSYSUPDATE$$b$$c20160303$$lPER01$$h1216
+000339138 CAT   L $$aSYSUPDATE$$b$$c20160303$$lPER01$$h1433
+000339138 CAT   L $$aSYSUPDATE$$b10$$c20160308$$lPER01$$h0845
+000339138 CAT   L $$aSYSUPDATE$$b10$$c20160308$$lPER01$$h0858
+000339138 CAT   L $$aSYSUPDATE$$b10$$c20170501$$lPER01$$h160
+EOF

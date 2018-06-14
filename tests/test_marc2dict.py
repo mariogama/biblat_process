@@ -45,3 +45,17 @@ class TestMarc2Dict(unittest.TestCase):
         self.assertDictEqual(marc_dict_expected, marc_dicts[0])
         self.assertEqual(1, len(marc_dicts))
 
+    def test_per01_basic(self):
+        self.maxDiff = None
+        self.config['db_files'] = 'test_per01.txt.gz'
+        marc2dict = Marc2Dict(self.config)
+        marc_dicts = []
+
+        for marc_dict in marc2dict.get_dict():
+            marc_dicts.append(marc_dict)
+        with open(os.path.join(self.test_files_path, 'test_per01.json'),
+                  encoding='utf-8') as per01_json:
+            marc_dict_expected = json.load(per01_json)
+
+        self.assertDictEqual(marc_dict_expected, marc_dicts[0])
+        self.assertEqual(1, len(marc_dicts))
