@@ -94,21 +94,20 @@ class Marc2Dict:
                     subtag.update({'z': '(%d)' % z})
                 # Ajustamos el valor de la etiqueta 120 cuando esta dentro
                 # de la etiqueta 100
-                if etiqueta == '100' and any(key in subtag for key in
-                                             ['u', 'v', 'w',
-                                              'x']) and any(
-                        key in subtag for key in ['a', '6']):
+                if etiqueta == '100' and \
+                        any(key in subtag for key in ['u', 'v', 'w', 'x']) \
+                        and any(key in subtag for key in ['a', '6']):
                     z += 1
                     subtag.update({'z': '(%d)' % z})
                     subtags['100'] = dict(
-                        (k, subtag[k]) for k in ['a', '6', 'z'] if
-                        k in subtag)
+                        (k, subtag[k]) for k in ['a', '6', 'z'] if k in subtag
+                    )
                     subtags['120'] = dict((k, subtag[k]) for k in
                                           ['u', 'v', 'w', 'x', 'z'] if
                                           k in subtag)
                     marc_dict['120in100'] = True
-                elif etiqueta == '100' and any(
-                        key in subtag for key in ['u', 'v', 'w', 'x']):
+                elif etiqueta == '100' \
+                        and any(key in subtag for key in ['u', 'v', 'w', 'x']):
                     z += 1
                     subtag.update({'z': '(%d)' % z})
                     subtags['120'] = subtag
