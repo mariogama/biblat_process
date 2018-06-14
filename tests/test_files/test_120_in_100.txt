@@ -1,0 +1,26 @@
+000001493 FMT   L BK
+000001493 LDR   L 00000nab^a2200000zi^4500
+000001493 008   L $$eChile
+000001493 022   L $$a0716-5927
+000001493 035   L $$aCLA01000001493
+000001493 036   L $$a9420643
+000001493 041   L $$aInglés
+000001493 100   L $$aDrazen, A.
+000001493 100   L $$uUniversity of Pennsylvania,$$wFiladelfia, Pensilvania.$$xEstados Unidos de América
+000001493 100   L $$aAzariadis, C.$$uUniversity of Maryland,$$wBaltimore, Maryland.$$xEstados Unidos de América
+000001493 222   L $$aRevista de análisis económico (Santiago)
+000001493 245   L $$aEndogenous fertility in models of growth
+000001493 260   L $$c1993
+000001493 300   L $$aV8$$bN1$$cjun$$eP131-144
+000001493 590   L $$aArtículo.$$bAnalítico
+000001493 698   L $$aEconomía
+000001493 650   L $$aEconomía
+000001493 653   L $$aEconometría
+000001493 653   L $$aDesarrollo económico
+000001493 653   L $$aPoblación
+000001493 653   L $$aIndustrialización
+000001493 653   L $$aCrecimiento económico
+000001493 653   L $$aModelos econométricos
+000001493 653   L $$aCrecimiento demográfico
+000001493 OWN   L $$aPUBLIC
+EOF

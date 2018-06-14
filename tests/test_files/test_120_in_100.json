@@ -1,0 +1,128 @@
+{
+  "FMT": [
+    {
+      "#": "BK"
+    }
+  ],
+  "LDR": [
+    {
+      "#": "00000nab^a2200000zi^4500"
+    }
+  ],
+  "008": [
+    {
+      "e": "Chile"
+    }
+  ],
+  "022": [
+    {
+      "a": "0716-5927"
+    }
+  ],
+  "035": [
+    {
+      "a": "CLA01000001493"
+    }
+  ],
+  "036": [
+    {
+      "a": "9420643"
+    }
+  ],
+  "041": [
+    {
+      "a": "Inglés"
+    }
+  ],
+  "100": [
+    {
+      "a": "Drazen, A"
+    },
+    {
+      "a": "Azariadis, C",
+      "z": "(2)"
+    }
+  ],
+  "120in100": true,
+  "120": [
+    {
+      "u": "University of Pennsylvania",
+      "w": "Filadelfia, Pensilvania",
+      "x": "Estados Unidos de América",
+      "z": "(1)"
+    },
+    {
+      "u": "University of Maryland",
+      "w": "Baltimore, Maryland",
+      "x": "Estados Unidos de América",
+      "z": "(2)"
+    }
+  ],
+  "222": [
+    {
+      "a": "Revista de análisis económico (Santiago)"
+    }
+  ],
+  "245": [
+    {
+      "a": "Endogenous fertility in models of growth"
+    }
+  ],
+  "260": [
+    {
+      "c": "1993"
+    }
+  ],
+  "300": [
+    {
+      "a": "V8",
+      "b": "N1",
+      "c": "jun",
+      "e": "P131-144"
+    }
+  ],
+  "590": [
+    {
+      "a": "Artículo",
+      "b": "Analítico"
+    }
+  ],
+  "698": [
+    {
+      "a": "Economía"
+    }
+  ],
+  "650": [
+    {
+      "a": "Economía"
+    }
+  ],
+  "653": [
+    {
+      "a": "Econometría"
+    },
+    {
+      "a": "Desarrollo económico"
+    },
+    {
+      "a": "Población"
+    },
+    {
+      "a": "Industrialización"
+    },
+    {
+      "a": "Crecimiento económico"
+    },
+    {
+      "a": "Modelos econométricos"
+    },
+    {
+      "a": "Crecimiento demográfico"
+    }
+  ],
+  "OWN": [
+    {
+      "a": "PUBLIC"
+    }
+  ]
+}
