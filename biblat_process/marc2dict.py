@@ -8,8 +8,8 @@ from biblat_process.utils import settings
 class Marc2Dict:
     """Clase para convertir registros MARC en un diccionario"""
 
-    def __init__(self):
-        self.config = settings.get(u'app:main', {})
+    def __init__(self, test_config=None):
+        self.config = test_config or settings.get(u'app:main', {})
         self.config['db_files'] = self.config['db_files'].split(',')
 
         # Patrones compilados

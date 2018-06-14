@@ -1,0 +1,244 @@
+{
+  "LDR": [
+    {
+      "#": "00000nab^a2200000zi^4500"
+    }
+  ],
+  "008": [
+    {
+      "e": "Internacional"
+    }
+  ],
+  "022": [
+    {
+      "a": "0031-0581"
+    }
+  ],
+  "035": [
+    {
+      "a": "CLA01000300023"
+    }
+  ],
+  "036": [
+    {
+      "a": "1001"
+    }
+  ],
+  "041": [
+    {
+      "a": "Español"
+    }
+  ],
+  "100": [
+    {
+      "a": "Sandoval Montes, I",
+      "z": "(1)",
+      "6": "ismael.sandoval@inegi.org.mx"
+    },
+    {
+      "a": "Ramos Leal, J.A",
+      "z": "(2)"
+    }
+  ],
+  "120": [
+    {
+      "z": "(1)",
+      "u": "Instituto Nacional de Estadística, Geografía e Informática",
+      "w": "Aguascalientes",
+      "x": "México"
+    },
+    {
+      "z": "(2)",
+      "u": "Instituto Potosino de Investigación Científica y Tecnológica",
+      "w": "San Luis Potosí",
+      "x": "México"
+    }
+  ],
+  "222": [
+    {
+      "a": "Revista geográfica"
+    }
+  ],
+  "245": [
+    {
+      "a": "Mapeo del riesgo a la contaminación del agua subterránea en los Valles Centrales de Oaxaca, México"
+    }
+  ],
+  "260": [
+    {
+      "c": "2009"
+    }
+  ],
+  "300": [
+    {
+      "b": "N145",
+      "c": "ene-jun",
+      "e": "P169-182"
+    }
+  ],
+  "546": [
+    {
+      "a": "Español, inglés"
+    }
+  ],
+  "504": [
+    {
+      "a": "Refs"
+    }
+  ],
+  "590": [
+    {
+      "a": "Artículo",
+      "b": "Analítico, descriptivo"
+    }
+  ],
+  "698": [
+    {
+      "a": "Geografía"
+    }
+  ],
+  "650": [
+    {
+      "a": "Geociencias"
+    }
+  ],
+  "653": [
+    {
+      "a": "Cartografía"
+    },
+    {
+      "a": "Hidrología"
+    },
+    {
+      "a": "Contaminación"
+    },
+    {
+      "a": "Mapeo"
+    },
+    {
+      "a": "Contaminación del agua"
+    },
+    {
+      "a": "Aguas subterráneas"
+    },
+    {
+      "a": "Riesgo ambiental"
+    },
+    {
+      "a": "Oaxaca"
+    },
+    {
+      "a": "México"
+    }
+  ],
+  "852": [
+    {
+      "u": "http://biblat.unam.mx/es/bibliometria/indicadores-por-revista/r#revista-geografica",
+      "y": "Indicadores Revista geográfica"
+    }
+  ],
+  "CAT": [
+    {
+      "a": "OCTAVIO",
+      "b": "10",
+      "c": "20100119",
+      "l": "CLA01",
+      "h": "1820"
+    },
+    {
+      "a": "OCTAVIO",
+      "b": "10",
+      "c": "20100119",
+      "l": "CLA01",
+      "h": "1821"
+    },
+    {
+      "c": "20100625",
+      "l": "CLA01",
+      "h": "2041"
+    },
+    {
+      "c": "20101204",
+      "l": "CLA01",
+      "h": "0138"
+    },
+    {
+      "c": "20120822",
+      "l": "CLA01",
+      "h": "1650"
+    },
+    {
+      "c": "20121112",
+      "l": "CLA01",
+      "h": "0252"
+    },
+    {
+      "c": "20130112",
+      "l": "CLA01",
+      "h": "1224"
+    },
+    {
+      "c": "20130529",
+      "l": "CLA01",
+      "h": "1618"
+    },
+    {
+      "a": "ANTONIA",
+      "b": "10",
+      "c": "20131112",
+      "l": "CLA01",
+      "h": "1724"
+    },
+    {
+      "c": "20131119",
+      "l": "CLA01",
+      "h": "1331"
+    },
+    {
+      "c": "20150430",
+      "l": "CLA01",
+      "h": "1613"
+    },
+    {
+      "c": "20150924",
+      "l": "CLA01",
+      "h": "1207"
+    },
+    {
+      "c": "20151201",
+      "l": "CLA01",
+      "h": "0820"
+    },
+    {
+      "a": "SYSUPDATE",
+      "c": "20160303",
+      "l": "CLA01",
+      "h": "1100"
+    },
+    {
+      "a": "SYSUPDATE",
+      "c": "20160303",
+      "l": "CLA01",
+      "h": "1122"
+    },
+    {
+      "a": "SYSUPDATE",
+      "c": "20160303",
+      "l": "CLA01",
+      "h": "1410"
+    },
+    {
+      "a": "SYSUPDATE",
+      "b": "10",
+      "c": "20160308",
+      "l": "CLA01",
+      "h": "0827"
+    },
+    {
+      "a": "SYSUPDATE",
+      "c": "20160308",
+      "l": "CLA01",
+      "h": "0907"
+    }
+  ]
+}
