@@ -1,0 +1,142 @@
+{
+  "LDR": [
+    {
+      "#": "00000nab^a2200000zi^4500"
+    }
+  ],
+  "008": [
+    {
+      "e": "Internacional"
+    }
+  ],
+  "022": [
+    {
+      "a": "0031-0581"
+    }
+  ],
+  "035": [
+    {
+      "a": "CLA01000300023"
+    }
+  ],
+  "036": [
+    {
+      "a": "1001"
+    }
+  ],
+  "041": [
+    {
+      "a": "Español"
+    }
+  ],
+  "100": [
+    {
+      "a": "Sandoval Montes, I",
+      "z": "(1)",
+      "6": "ismael.sandoval@inegi.org.mx",
+      "@ind": "1#"
+    },
+    {
+      "a": "Ramos Leal, J.A",
+      "z": "(2)",
+      "@ind": "3#"
+    }
+  ],
+  "120": [
+    {
+      "z": "(1)",
+      "u": "Instituto Nacional de Estadística, Geografía e Informática",
+      "w": "Aguascalientes",
+      "x": "México"
+    },
+    {
+      "z": "(2)",
+      "u": "Instituto Potosino de Investigación Científica y Tecnológica",
+      "w": "San Luis Potosí",
+      "x": "México"
+    }
+  ],
+  "222": [
+    {
+      "a": "Revista geográfica"
+    }
+  ],
+  "245": [
+    {
+      "a": "Mapeo del riesgo a la contaminación del agua subterránea en los Valles Centrales de Oaxaca, México"
+    }
+  ],
+  "260": [
+    {
+      "c": "2009"
+    }
+  ],
+  "300": [
+    {
+      "b": "N145",
+      "c": "ene-jun",
+      "e": "P169-182"
+    }
+  ],
+  "546": [
+    {
+      "a": "Español, inglés"
+    }
+  ],
+  "504": [
+    {
+      "a": "Refs"
+    }
+  ],
+  "590": [
+    {
+      "a": "Artículo",
+      "b": "Analítico, descriptivo"
+    }
+  ],
+  "698": [
+    {
+      "a": "Geografía"
+    }
+  ],
+  "650": [
+    {
+      "a": "Geociencias"
+    }
+  ],
+  "653": [
+    {
+      "a": "Cartografía"
+    },
+    {
+      "a": "Hidrología"
+    },
+    {
+      "a": "Contaminación"
+    },
+    {
+      "a": "Mapeo"
+    },
+    {
+      "a": "Contaminación del agua"
+    },
+    {
+      "a": "Aguas subterráneas"
+    },
+    {
+      "a": "Riesgo ambiental"
+    },
+    {
+      "a": "Oaxaca"
+    },
+    {
+      "a": "México"
+    }
+  ],
+  "852": [
+    {
+      "u": "http://biblat.unam.mx/es/bibliometria/indicadores-por-revista/r#revista-geografica",
+      "y": "Indicadores Revista geográfica"
+    }
+  ]
+}
