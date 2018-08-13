@@ -13,8 +13,11 @@ class Marc2Dict:
         self.config['db_files'] = self.config['db_files'].split(',')
 
         # Patrones compilados
+        # Separar elementos de un renglon, numeor de sistema, etiquetas y sub campos
         self.record_pattern = re.compile(r'(^\d{9})\s(.{3})(.{2})\sL\s(.+?$)')
+        # Identificar y separar subcampos
         self.el_val_pattern = re.compile(r'\$\$([a-zA-Z0-9])')
+
         self.sequence_pattern = re.compile(r"^\(([0-9]+?)\)$")
 
     def get_lines(self):

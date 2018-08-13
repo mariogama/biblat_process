@@ -1,1 +1,2 @@
 coverage==4.5.1
+-e git+https://github.com/dgb-sistemas/biblat-schema#egg=biblatschema
