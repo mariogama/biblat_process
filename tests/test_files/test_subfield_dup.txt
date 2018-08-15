@@ -1,0 +1,28 @@
+000242983 FMT   L BK
+000242983 LDR   L 00000nab^a2200000zi^4500
+000242983 008   L $$eBarbados
+000242983 022   L $$a1028-8813
+000242983 035   L $$aCLA01000242983
+000242983 036   L $$a0603
+000242983 041   L $$aInglés
+000242983 100   L $$aArchibald, Xiomara$$aLewis-Bynoe, Denny$$aMoore, Winston$$uCentral Bank of Barbados,$$vResearch Department,$$wBridgetown.$$xBarbados
+000242983 222   L $$aJournal of Eastern Caribbean Studies
+000242983 245   L $$aBarriers To Starting A Business in Barbados
+000242983 260   L $$c2005
+000242983 300   L $$aV30$$bN3$$csep$$eP1-27
+000242983 546   L $$aInglés
+000242983 504   L $$aRefs.
+000242983 590   L $$aArtículo.$$bAnalítico
+000242983 698   L $$aCiencia política
+000242983 650   L $$aEconomía
+000242983 650   L $$aAdministración y contaduría
+000242983 653   L $$aEmpresas
+000242983 653   L $$aAdministración pública
+000242983 653   L $$aInversiones
+000242983 653   L $$aTrámites burocráticos
+000242983 653   L $$aBurocracia
+000242983 653   L $$aSimplificación administrativa
+000242983 653   L $$aEmprendedores
+000242983 653   L $$aBarbados
+000242983 852   L $$uhttp://biblat.unam.mx/es/bibliometria/indicadores-por-revista/j#journal-of-eastern-caribbean-studies$$yIndicadores Journal of Eastern Caribbean Studies
+EOF

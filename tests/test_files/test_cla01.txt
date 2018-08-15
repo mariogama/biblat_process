@@ -1,0 +1,48 @@
+000300023 LDR   L 00000nab^a2200000zi^4500
+000300023 008   L $$eInternacional
+000300023 022   L $$a0031-0581
+000300023 035   L $$aCLA01000300023
+000300023 036   L $$a1001
+000300023 041   L $$aEspañol
+000300023 100   L $$aSandoval Montes, I.$$z(1)$$6ismael.sandoval@inegi.org.mx
+000300023 100   L $$aRamos Leal, J.A.$$z(2)
+000300023 120   L $$z(1)$$uInstituto Nacional de Estadística, Geografía e Informática,$$wAguascalientes.$$xMéxico
+000300023 120   L $$z(2)$$uInstituto Potosino de Investigación Científica y Tecnológica,$$wSan Luis Potosí.$$xMéxico
+000300023 222   L $$aRevista geográfica
+000300023 245   L $$aMapeo del riesgo a la contaminación del agua subterránea en los Valles Centrales de Oaxaca, México
+000300023 260   L $$c2009
+000300023 300   L $$bN145$$cene-jun$$eP169-182
+000300023 546   L $$aEspañol, inglés
+000300023 504   L $$aRefs.
+000300023 590   L $$aArtículo.$$bAnalítico, descriptivo
+000300023 698   L $$aGeografía
+000300023 650   L $$aGeociencias
+000300023 653   L $$aCartografía
+000300023 653   L $$aHidrología
+000300023 653   L $$aContaminación
+000300023 653   L $$aMapeo
+000300023 653   L $$aContaminación del agua
+000300023 653   L $$aAguas subterráneas
+000300023 653   L $$aRiesgo ambiental
+000300023 653   L $$aOaxaca
+000300023 653   L $$aMéxico
+000300023 852   L $$uhttp://biblat.unam.mx/es/bibliometria/indicadores-por-revista/r#revista-geografica$$yIndicadores Revista geográfica
+000300023 CAT   L $$aOCTAVIO$$b10$$c20100119$$lCLA01$$h1820
+000300023 CAT   L $$aOCTAVIO$$b10$$c20100119$$lCLA01$$h1821
+000300023 CAT   L $$c20100625$$lCLA01$$h2041
+000300023 CAT   L $$c20101204$$lCLA01$$h0138
+000300023 CAT   L $$c20120822$$lCLA01$$h1650
+000300023 CAT   L $$c20121112$$lCLA01$$h0252
+000300023 CAT   L $$c20130112$$lCLA01$$h1224
+000300023 CAT   L $$c20130529$$lCLA01$$h1618
+000300023 CAT   L $$aANTONIA$$b10$$c20131112$$lCLA01$$h1724
+000300023 CAT   L $$c20131119$$lCLA01$$h1331
+000300023 CAT   L $$c20150430$$lCLA01$$h1613
+000300023 CAT   L $$c20150924$$lCLA01$$h1207
+000300023 CAT   L $$c20151201$$lCLA01$$h0820
+000300023 CAT   L $$aSYSUPDATE$$b$$c20160303$$lCLA01$$h1100
+000300023 CAT   L $$aSYSUPDATE$$b$$c20160303$$lCLA01$$h1122
+000300023 CAT   L $$aSYSUPDATE$$b$$c20160303$$lCLA01$$h1410
+000300023 CAT   L $$aSYSUPDATE$$b10$$c20160308$$lCLA01$$h0827
+000300023 CAT   L $$aSYSUPDATE$$b$$c20160308$$lCLA01$$h0907
+EOF

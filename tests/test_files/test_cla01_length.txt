@@ -1,0 +1,60 @@
+000000001 FMT   L BK
+000000001 LDR   L 00000nab^a2200000zi^4500
+000000001 008   L $$eMéxico
+000000001 022   L $$a0071-1675
+000000001 035   L $$aCLA01000000001
+000000001 036   L $$a9421150
+000000001 041   L $$aEspañol
+000000001 100   L $$aLeón-Portilla, Miguel$$z(1)
+000000001 120   L $$z(1)$$uUniversidad Nacional Autónoma de México,$$vInstituto de Investigaciones Históricas,$$wMéxico, Distrito Federal.$$xMéxico
+000000001 222   L $$aEstudios de cultura náhuatl
+000000001 245   L $$aEncuentro de dos mundos
+000000001 260   L $$c1992
+000000001 300   L $$bN22$$eP15-27
+000000001 504   L $$a11
+000000001 590   L $$aEnsayo.$$bHistórico, socioeconómico
+000000001 698   L $$aAntropología
+000000001 650   L $$aHistoria
+000000001 650   L $$aAntropología
+000000001 653   L $$aHistoria social
+000000001 653   L $$aHistoria de la cultura
+000000001 653   L $$aFilosofía de la historia
+000000001 653   L $$aAntropología de la cultura
+000000001 653   L $$aEtnología y antropología social
+000000001 653   L $$a1492
+000000001 653   L $$aAmérica
+000000001 653   L $$aIndígenas
+000000001 653   L $$aQuinto centenario
+000000001 653   L $$aDescubrimiento de América
+000000001 852   L $$uhttp://biblat.unam.mx/es/bibliometria/indicadores-por-revista/e#estudios-de-cultura-nahuatl$$yIndicadores Estudios de cultura náhuatl
+000000001 OWN   L $$aPUBLIC
+000000002 FMT   L BK
+000000002 LDR   L 00000nab^a2200000zi^4500
+000000002 008   L $$eMéxico
+000000002 022   L $$a0071-1675
+000000002 035   L $$aCLA01000000002
+000000002 036   L $$a9420030
+000000002 041   L $$aEspañol
+000000002 100   L $$aJohansson, Patrick
+000000002 222   L $$aEstudios de cultura náhuatl
+000000002 245   L $$aYaocuicatl : cantos de guerra y guerra de cantos
+000000002 260   L $$c1992
+000000002 300   L $$bN22$$eP29-43
+000000002 590   L $$aEnsayo.$$bHistórico, descriptivo
+000000002 504   L $$a4
+000000002 698   L $$aAntropología
+000000002 650   L $$aLiteratura y lingüística
+000000002 650   L $$aAntropología
+000000002 653   L $$aSociolingüística
+000000002 653   L $$aAntropología lingüística
+000000002 653   L $$aAntropología de la cultura
+000000002 653   L $$aEtnología y antropología social
+000000002 653   L $$aMéxico
+000000002 653   L $$aAztecas
+000000002 653   L $$aYaocuicatl
+000000002 653   L $$aLingüística
+000000002 653   L $$aCanto-guerra
+000000002 653   L $$aRitual magico
+000000002 852   L $$uhttp://biblat.unam.mx/es/bibliometria/indicadores-por-revista/e#estudios-de-cultura-nahuatl$$yIndicadores Estudios de cultura náhuatl
+000000002 OWN   L $$aPUBLIC
+EOF

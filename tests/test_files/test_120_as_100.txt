@@ -1,0 +1,35 @@
+000000045 FMT   L BK
+000000045 LDR   L 00000nab^a2200000zi^4500
+000000045 008   L $$eCuba
+000000045 022   L $$a0008-7157
+000000045 035   L $$aCLA01000000045
+000000045 036   L $$a9421284
+000000045 041   L $$aEspañol
+000000045 100   L $$aDario Murrieta, R.
+000000045 100   L $$aPalazón Mayoral, María Rosa
+000000045 100   L $$uUniversidad Nacional Autónoma de México,$$vInst Inv Filologicas,$$wMéxico, Distrito Federal.$$xMéxico
+000000045 222   L $$aCasa de las Américas
+000000045 245   L $$aLas verdaderas leyendas de joaquin murrieta
+000000045 260   L $$c1993
+000000045 300   L $$aV33$$bN191$$cabr-jun$$eP37-49
+000000045 590   L $$aEnsayo.$$bDescriptivo
+000000045 504   L $$a15
+000000045 698   L $$aLiteratura y lingüística
+000000045 650   L $$aLiteratura y lingüística
+000000045 650   L $$aSociología
+000000045 650   L $$aAntropología
+000000045 653   L $$aNovela
+000000045 653   L $$aIdeología
+000000045 653   L $$aAntropología de la cultura
+000000045 653   L $$aEtnología y antropología social
+000000045 653   L $$aOro
+000000045 653   L $$aLeyendas
+000000045 653   L $$aMurrieta, J.
+000000045 653   L $$aRomanticismo
+000000045 653   L $$aNacionalidad
+000000045 653   L $$aHispanoamérica
+000000045 653   L $$aAlta California
+000000045 653   L $$aEstados Unidos de América
+000000045 852   L $$uhttp://biblat.unam.mx/es/bibliometria/indicadores-por-revista/c#casa-de-las-americas$$yIndicadores Casa de las Américas
+000000045 OWN   L $$aPUBLIC
+EOF

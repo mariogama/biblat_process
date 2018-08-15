@@ -1,0 +1,281 @@
+{
+  "FMT": [
+    {
+      "#": "BK"
+    }
+  ],
+  "LDR": [
+    {
+      "#": "00000nab^a2200000zi^4500"
+    }
+  ],
+  "008": [
+    {
+      "e": "Brasil"
+    }
+  ],
+  "022": [
+    {
+      "a": "0031-1049"
+    }
+  ],
+  "035": [
+    {
+      "a": "PER01000339138"
+    }
+  ],
+  "036": [
+    {
+      "a": "1112"
+    }
+  ],
+  "041": [
+    {
+      "a": "Inglés"
+    }
+  ],
+  "100": [
+    {
+      "a": "Oppenheimer, Marina",
+      "z": "(1)",
+      "6": "marinaopp@yahoo.com.br"
+    },
+    {
+      "a": "Silveira, Luis Fabio",
+      "z": "(1)",
+      "6": "lfsilvei@usp.br"
+    }
+  ],
+  "120": [
+    {
+      "z": "(1)",
+      "u": "Universidade de Sao Paulo",
+      "v": "Museu de Zoologia",
+      "w": "Sao Paulo",
+      "x": "Brasil"
+    }
+  ],
+  "222": [
+    {
+      "a": "Papeis avulsos de zoologia"
+    }
+  ],
+  "245": [
+    {
+      "a": "A taxonomic review of the Dark-winged Trumpeter Psophia viridis (Aves: Gruiformes: Psophiidae)"
+    }
+  ],
+  "260": [
+    {
+      "c": "2008"
+    }
+  ],
+  "300": [
+    {
+      "a": "V48",
+      "b": "N29",
+      "e": "P547-555"
+    }
+  ],
+  "504": [
+    {
+      "a": "Refs"
+    }
+  ],
+  "520": [
+    {
+      "p": "Os jacamins-de-costas-verdes, Psophia viridis (Gruiformes, Psophiidae) são endêmicos da Amazônia brasileira e contam, atualmente, com três subespécies reconhecidas: Psophia viridis viridis Spix, 1825; Psophia v. dextralis Conover, 1934, e Psophia v. obscura Pelzeln, 1857, além de P. v. interjecta Griscom & Greenway, 1937, cuja validade tem sido questionada por diversos autores. Estes táxons distribuem-se alopatricamente ao sul do rio Amazonas, embora os limites precisos de suas distribuições sejam ainda pouco conhecidos. Os táxons deste complexo nunca passaram por uma revisão taxonômica, e o presente trabalho teve como objetivos testar a validade dos mesmos. Com base no Conceito Filogenético de Espécie, os caracteres morfométricos e de colorido da plumagem foram analisados, além de refinar a distribuição geográfica dos táxons do complexo. Foram examinados 108 espécimes procedentes de 41 localidades, incluindo todos os tipos, e foram considerados também os registros confiáveis de literatura para delimitar-se a distribuição geográfica. Os dados morfométricos não indicaram diferenças significativas entre os táxons, não apontando também qualquer dimorfismo sexual. Entretanto, a análise dos caracteres de plumagem evidenciou padrões consistentes e distintos para cada um dos táxons, exceto para P. v. interjecta, cujos caracteres indicados pelos autores como diagnósticos são resultado de variação individual. Não foi observada variação clinal ou sinal de intergradação entre estes táxons, mesmo nas regiões próximas às cabeceiras dos grandes rios amazônicos, onde supostamente as populações poderiam entrar em contato. Sugere-se que as subespécies correntemente aceitas sejam elevadas ao nível de espécie, a saber: Psophia viridis Spix, 1825, que ocorre no interflúvio Madeira-Tapajós; P. dextralis Conover, 1934, encontrado no interflúvio Tapajós-Tocantins, e P. obscura Pelzeln, 1857, que distribui-se da margem direi"
+    },
+    {
+      "i": "The Dark-winged Trumpeter, Psophia viridis (Gruiformes, Psophiidae) is a Brazilian endemic species and includes three subspecies: Psophia viridis viridis Spix, 1825; Psophia v. dextralis Conover, 1934, and Psophia v. obscura Pelzeln, 1857, as well as P. v. interjecta Griscom & Greenway, 1937, whose validity has been questioned by several authors. These taxa are allopatric in distribution along the south of the Amazon River, although the precise limits of their distribution still remain unknown. This complex has never been taxonomically reviewed and this work aims to test the validity of its taxa based on the Phylogenetic Species Concept. Morphometrical characters and plumage colour patterns were analyzed, and the distribution of the taxa was also revised. In this study, 108 specimens from 41 localities were examined (all types included), with each reliable literature-based locality being included in order to delimit the geographical distribution of the complex. Morphometrical data did not point out significant differences between the taxa, also showing no sexual dimorphism among them. Meanwhile, plumage characters showed consistent and distinct patterns for each of the taxa, except for P. v. interjecta, whose features indicated by authors as diagnosable are the result of individual variation. No clinal variation or intergradation were observed, even at regions close to the rivers headwaters, where supposedly populations could be in contact. It is suggested that the currently accepted subspecies be elevated to the species level, such as: Psophia viridis Spix, 1825, distributed in the Madeira-Tapajós interfluvium, P. dextralis, found in the Tapajós-Tocantins interfluvium, and P. obscura, which occurs from the right bank of the Tocantins River to the west of the State of Maranhão"
+    }
+  ],
+  "546": [
+    {
+      "a": "Portugués, inglés"
+    }
+  ],
+  "590": [
+    {
+      "a": "Monografía",
+      "b": "Descriptivo"
+    }
+  ],
+  "698": [
+    {
+      "a": "Biología"
+    }
+  ],
+  "650": [
+    {
+      "a": "Biología"
+    }
+  ],
+  "653": [
+    {
+      "a": "Aves"
+    },
+    {
+      "a": "Taxonomía y sistemática"
+    },
+    {
+      "a": "Gruiformes"
+    },
+    {
+      "a": "Psophiidae"
+    },
+    {
+      "a": "Psophia viridis"
+    },
+    {
+      "a": "Morfología"
+    },
+    {
+      "a": "Museos"
+    },
+    {
+      "a": "Brasil"
+    }
+  ],
+  "654": [
+    {
+      "a": "Biology"
+    },
+    {
+      "a": "Birds"
+    },
+    {
+      "a": "Taxonomy and systematics"
+    },
+    {
+      "a": "Gruiformes"
+    },
+    {
+      "a": "Psophiidae"
+    },
+    {
+      "a": "Psophia viridis"
+    },
+    {
+      "a": "Morphology"
+    },
+    {
+      "a": "Museums"
+    },
+    {
+      "a": "Brazil"
+    }
+  ],
+  "852": [
+    {
+      "u": "http://biblat.unam.mx/es/bibliometria/indicadores-por-revista/p#papeis-avulsos-de-zoologia",
+      "y": "Indicadores Papeis avulsos de zoologia"
+    }
+  ],
+  "856": [
+    {
+      "u": "http://www.scielo.br/scielo.php?script=sci_arttext&pid=S0031-10492009004100001&lng=pt&nrm=iso&tlng=en",
+      "y": "Texto completo (Ver HTML)"
+    }
+  ],
+  "CAT": [
+    {
+      "a": "ROSA",
+      "b": "10",
+      "c": "20111209",
+      "l": "PER01",
+      "h": "1913"
+    },
+    {
+      "c": "20120823",
+      "l": "PER01",
+      "h": "0152"
+    },
+    {
+      "c": "20121110",
+      "l": "PER01",
+      "h": "1009"
+    },
+    {
+      "c": "20121115",
+      "l": "PER01",
+      "h": "1017"
+    },
+    {
+      "c": "20130113",
+      "l": "PER01",
+      "h": "1520"
+    },
+    {
+      "c": "20130404",
+      "l": "PER01",
+      "h": "0453"
+    },
+    {
+      "c": "20130530",
+      "l": "PER01",
+      "h": "1000"
+    },
+    {
+      "a": "ROSA",
+      "b": "10",
+      "c": "20140430",
+      "l": "PER01",
+      "h": "1012"
+    },
+    {
+      "c": "20140926",
+      "l": "PER01",
+      "h": "1506"
+    },
+    {
+      "c": "20150430",
+      "l": "PER01",
+      "h": "1628"
+    },
+    {
+      "c": "20151201",
+      "l": "PER01",
+      "h": "0827"
+    },
+    {
+      "a": "SYSUPDATE",
+      "c": "20160303",
+      "l": "PER01",
+      "h": "1141"
+    },
+    {
+      "a": "SYSUPDATE",
+      "c": "20160303",
+      "l": "PER01",
+      "h": "1216"
+    },
+    {
+      "a": "SYSUPDATE",
+      "c": "20160303",
+      "l": "PER01",
+      "h": "1433"
+    },
+    {
+      "a": "SYSUPDATE",
+      "b": "10",
+      "c": "20160308",
+      "l": "PER01",
+      "h": "0845"
+    },
+    {
+      "a": "SYSUPDATE",
+      "b": "10",
+      "c": "20160308",
+      "l": "PER01",
+      "h": "0858"
+    },
+    {
+      "a": "SYSUPDATE",
+      "b": "10",
+      "c": "20170501",
+      "l": "PER01",
+      "h": "160"
+    }
+  ]
+}

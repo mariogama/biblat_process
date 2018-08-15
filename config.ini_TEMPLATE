@@ -1,0 +1,5 @@
+[app:main]
+remote_addr = 0.0.0.0
+remote_path = /path/to/remote/dir/in/aleph/server
+local_path = /path/to/local/process/files
+db_files = cla01_valid.txt.gz,per01_valid.txt.gz
