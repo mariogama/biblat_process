@@ -1,17 +1,22 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 import subprocess
-import string
 import datetime
-from biblat_process.utils import settings
+import re
+import argparse
+from biblat_process.utils import settings, cformatter
 
-host = "aleph@"+settings.get(u'app:main', {})['remote_addr']
-sqlScript = """
+cformatter = cformatter()
+
+
+class dumper():
+    host = "aleph@{}"
+    sqlScript = """
 set source_par = '{dlib}'
 source ${{alephm_proc}}/set_lib_env
 setenv PATH /exlibris/aleph/.local/bin:$PATH
 set fecha=`date +%d%m%y`
-set dir='"""+settings.get(u'app:main', {})['remote_path']+"""
+set dir='{remote_path}'
 set fentrada=sis{dlib}_$fecha.lst
 cd $dir
 cat <<EOF > consulta.sql
@@ -39,12 +44,12 @@ mv $dir/$fentrada $alephe_scratch/$fentrada
 exit
 """
 
-script = """
-set source_par = '{dlib}'
+    script = """
+    set source_par = '{dlib}'
 source ${{alephm_proc}}/set_lib_env
 setenv PATH /exlibris/aleph/.local/bin:$PATH
 set fecha=`date +%d%m%y`
-set dir='"""+settings.get(u'app:main', {})['remote_path']+"""
+set dir='{remote_path}'
 set fentrada=sis{dlib}_$fecha.lst
 set fsalida={dlib}json_$fecha.txt
 cd $dir
@@ -60,78 +65,117 @@ echo "EOF" >> $dir/$fsalida
 echo `wc -l $alephe_scratch/$fentrada | awk '{{print $1}}'` >> $dir/$fsalida
 cd $dir
 gzip -9 $fsalida
-"""
+    """
 
-DATE = datetime.date.today().strftime('%d%m%y')
+    DATE = datetime.date.today().strftime('%d%m%y')
+
+    def __init__(self, test_config=None):
+        self.config = test_config or settings.get(u'app:main', {})
+        self.config['local_path'] = self.config['local_path']
+
+        # Patrones compilados
+        self.record_pattern = re.compile(r'(^\d{9})\s(.{3})(.{2})\sL\s(.+?$)')
+        self.el_val_pattern = re.compile(r'\$\$([a-zA-Z0-9])')
+        self.sequence_pattern = re.compile(r"^\(([0-9]+?)\)$")
+
+    def list_claper(self, base):
+        print('listclaperexecute')
+        lsqlScript = self.sqlScript
+        remote_path = self.config['remote_path']
+        remote_addr = self.config['remote_addr']
+        if base == 'per01':
+            lsqlScript += "\ngsed -r -i.bak -e '/^000200053/d' " \
+                          "$alephe_scratch/$fentrada"
+            lsqlScript += "\nrm $alephe_scratch/$fentrada.bak"
+        lsqlScript = cformatter.format(lsqlScript, dlib=base,
+                                       remote_path=remote_path)
+
+        host = self.host.format(remote_addr)
+
+        ssh = subprocess.Popen(["ssh", host, "csh -s"],
+                               shell=False,
+                               stdin=subprocess.PIPE,
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE)
+
+        ssh.communicate(lsqlScript.encode())
+        ssh.wait()
+
+    def dump_claper(self, base):
+
+        self.list_claper(base)
+        print('dumpclaperexecute')
+        remote_path = self.config['remote_path']
+        remote_addr = self.config['remote_addr']
+        lscript = cformatter.format(self.script, dlib=base,
+                                    remote_path=remote_path)
+        host = self.host.format(remote_addr)
+
+        ssh = subprocess.Popen(["ssh", host, "csh -s"],
+                               shell=False,
+                               stdin=subprocess.PIPE,
+                               stdout=subprocess.PIPE,
+                               stderr=subprocess.PIPE)
+        ssh.communicate(lscript.encode())
+        ssh.wait()
+
+        self.pull_claper(base)
+
+    def pull_claper(self, base):
+        print('pullclaperexecute')
+        local_path = self.config['local_path']
+        remote_path = self.config['remote_path']
+        remote_addr = self.config['remote_addr']
+        cmd = "cat {remote_path}/{dlib}json_{dump_date}.txt.gz" \
+            .format(remote_path=remote_path, dlib=base, dump_date=self.DATE)
+        output_file = open('{local_path}/{dlib}_valid.txt.gz'.format(
+            local_path=local_path, dlib=base), 'w')
+
+        host = self.host.format(remote_addr)
+
+        ssh = subprocess.Popen(["ssh",
+                                host, cmd],
+                               shell=False,
+                               stdout=output_file)
+        ssh.wait()
+        output_file.close()
 
 
-class cformatter(string.Formatter):
+def main():
+    parser = argparse.ArgumentParser(
+        description="Cosecha de archivos"
+    )
 
-    def __init__(self):
-        super(cformatter, self).__init__()
+    parser.add_argument(
+        '--periodica',
+        action='store_true',
+        dest='periodica',
+        help='Procesando periodica'
+    )
 
-    def convert_field(self, value, conversion):
-        # do any conversion on the resulting object
-        if conversion is None:
-            return value
-        elif conversion == 's':
-            return str(value)
-        elif conversion == 'r':
-            return repr(value)
-        elif conversion == 'u':
-            return value.upper()
-        elif conversion == 'l':
-            return value.lower()
-        raise ValueError(
-            "Unknown conversion specifier {0!s}".format(conversion))
+    parser.add_argument(
+        '--all',
 
+        action='store_true',
+        dest='all',
+        help='Procesando periodica y clase'
+    )
 
-cformatter = cformatter()
+    parser.add_argument(
+        '--clase',
+        action='store_true',
+        dest='clase',
+        help='Procesando clase'
+    )
+    args = parser.parse_args()
 
+    d = dumper()
+    if args.all:
+        d.dump_claper('cla01')
+        d.dump_claper('per01')
+    elif args.periodica:
 
-def list_claper(base, include_scielo=False):
-    lsqlScript = sqlScript
-    lsqlScript = cformatter.format(lsqlScript, dlib=base)
-    print (lsqlScript)
-    ssh = subprocess.Popen(["ssh", host, "csh -s"],
-                           shell=False,
-                           stdin=subprocess.PIPE,
-                           stdout=subprocess.PIPE,
-                           stderr=subprocess.PIPE)
-    ssh.communicate(lsqlScript)
-    ssh.wait()
+        d.dump_claper('per01')
+    elif args.clase:
 
-
-def dump_claper(base, include_scielo=False):
-    list_claper(base, include_scielo)
-    lscript = cformatter.format(script, dlib=base)
-
-    print (lscript)
-
-    ssh = subprocess.Popen(["ssh", host, "csh -s"],
-                           shell=False,
-                           stdin=subprocess.PIPE,
-                           stdout=subprocess.PIPE,
-                           stderr=subprocess.PIPE)
-    ssh.communicate(lscript)
-    ssh.wait()
-
-    pull_claper(base)
-
-
-def pull_claper(base):
-    dir = settings.get(u'app:main', {})['remote_path']
-    cmd = "cat "+dir+"/{dlib}json_{dump_date}.txt.gz"\
-        .format(dlib=base, dump_date=DATE)
-    output_file = open(settings.get(u'app:main', {})['local_path'] +
-                       '/{dlib}_valid.txt.gz'.format(dlib=base), 'w')
-
-    ssh = subprocess.Popen(["ssh",
-                            host, cmd],
-                           shell=False,
-                           stdout=output_file)
-    ssh.wait()
-    output_file.close()
-
-dump_claper('cla01')
-dump_claper('per01')
+        d.dump_claper('cla01')

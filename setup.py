@@ -21,5 +21,13 @@ setup(
     install_requires=[],
     tests_require=[],
     dependency_links=[],
-    test_suite='tests.discover_suite'
+    test_suite='tests.discover_suite',
+
+    entry_points = """\
+        [paste.app_factory]
+        
+        [console_scripts]
+        harvest=biblat_process.marc_dump:main
+        
+        """,
 )
