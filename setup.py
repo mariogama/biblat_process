@@ -22,12 +22,10 @@ setup(
     tests_require=[],
     dependency_links=[],
     test_suite='tests.discover_suite',
-
-    entry_points = """\
-        [paste.app_factory]
+    entry_points={
         
-        [console_scripts]
-        harvest=biblat_process.marc_dump:main
-        
-        """,
+        'console_scripts': [
+        'harvest=biblat_process.marc_dump:main',
+        ],
+    },
 )
