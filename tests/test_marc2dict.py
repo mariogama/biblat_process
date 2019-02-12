@@ -4,6 +4,7 @@ import gzip
 import unittest
 import json
 from biblat_process.marc2dict import Marc2Dict
+from biblat_process.settings import config
 
 
 class TestMarc2Dict(unittest.TestCase):
@@ -11,9 +12,6 @@ class TestMarc2Dict(unittest.TestCase):
     def setUp(self):
         self.test_path = os.path.dirname(os.path.realpath(__file__))
         self.test_files_path = os.path.join(self.test_path, 'test_files')
-        self.config = {
-            'local_path': self.test_files_path,
-        }
 
         for root, paths, files in os.walk(self.test_files_path):
             for file in files:
@@ -31,8 +29,8 @@ class TestMarc2Dict(unittest.TestCase):
 
     def test_cla01_basic(self):
         self.maxDiff = None
-        self.config['db_files'] = 'test_cla01.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_cla01.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -47,8 +45,8 @@ class TestMarc2Dict(unittest.TestCase):
 
     def test_per01_basic(self):
         self.maxDiff = None
-        self.config['db_files'] = 'test_per01.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_per01.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -62,8 +60,8 @@ class TestMarc2Dict(unittest.TestCase):
 
     def test_claper_length(self):
         self.maxDiff = None
-        self.config['db_files'] = 'test_cla01.txt.gz,test_per01.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_cla01.txt.gz', 'test_per01.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -82,8 +80,8 @@ class TestMarc2Dict(unittest.TestCase):
 
     def test_cla01_length(self):
         self.maxDiff = None
-        self.config['db_files'] = 'test_cla01_length.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_cla01_length.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -100,8 +98,8 @@ class TestMarc2Dict(unittest.TestCase):
     def test_120_as_100(self):
         """Prueba para verificar etiqueta 120 como 100"""
         self.maxDiff = None
-        self.config['db_files'] = 'test_120_as_100.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_120_as_100.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -117,8 +115,8 @@ class TestMarc2Dict(unittest.TestCase):
     def test_120_in_100(self):
         """Prueba para verificar etiqueta 120 en 100"""
         self.maxDiff = None
-        self.config['db_files'] = 'test_120_in_100.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_120_in_100.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -135,8 +133,8 @@ class TestMarc2Dict(unittest.TestCase):
         """"Prueba para verificar la corrección del sub-campo 100z encontrado
         como otro sub-campo"""
         self.maxDiff = None
-        self.config['db_files'] = 'test_fix_100z.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_fix_100z.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -152,8 +150,8 @@ class TestMarc2Dict(unittest.TestCase):
     def test_subfield_dup(self):
         """Prueba para verificar cuando un sub-campo esta duplicado"""
         self.maxDiff = None
-        self.config['db_files'] = 'test_subfield_dup.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_subfield_dup.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():
@@ -168,8 +166,8 @@ class TestMarc2Dict(unittest.TestCase):
 
     def test_field_ind(self):
         self.maxDiff = None
-        self.config['db_files'] = 'test_field_ind.txt.gz'
-        marc2dict = Marc2Dict(self.config)
+        config.DB_FILES = ['test_field_ind.txt.gz']
+        marc2dict = Marc2Dict()
         marc_dicts = []
 
         for marc_dict in marc2dict.get_dict():

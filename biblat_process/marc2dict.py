@@ -2,16 +2,13 @@
 import os
 import gzip
 import re
-from biblat_process.utils import settings
+from biblat_process.settings import config
 
 
 class Marc2Dict:
     """Clase para convertir registros MARC en un diccionario"""
 
-    def __init__(self, test_config=None):
-        self.config = test_config or settings.get(u'app:main', {})
-        self.config['db_files'] = self.config['db_files'].split(',')
-
+    def __init__(self):
         # Patrones compilados
         self.record_pattern = re.compile(r'(^\d{9})\s(.{3})(.{2})\sL\s(.+?$)')
         self.el_val_pattern = re.compile(r'\$\$([a-zA-Z0-9])')
@@ -22,8 +19,8 @@ class Marc2Dict:
         Regresa las lineas de los archivos en formato ALEPH secuencial
         por medio del generador yield
         """
-        for db_file in self.config['db_files']:
-            db_file = os.path.join(self.config['local_path'], db_file)
+        for db_file in config.DB_FILES:
+            db_file = os.path.join(config.LOCAL_PATH, db_file)
             with gzip.open(db_file, mode='rt',
                            encoding='utf-8', errors='ignore') as process_file:
                 for line in process_file:
