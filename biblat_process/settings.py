@@ -6,6 +6,7 @@ import os
 
     Variables de entorno:
         - BIBLATP_REMOTE_ADDR: Dirección IP del servidor ALEPH
+        - BIBLATP_REMOTE_USER: Usuario del servidor ALEPH
         - BIBLATP_REMOTE_PATH: Directorio remoto para descargar datos
         - BIBLATP_LOCAL_PATH: Directorio local para guardar los datos
 """
@@ -14,6 +15,7 @@ SCRIPT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 
 class Config:
+    REMOTE_USER = os.environ.get('BIBLATP_REMOTE_USER', 'aleph')
     REMOTE_ADDR = os.environ.get('BIBLATP_REMOTE_ADDR', '127.0.0.1')
     REMOTE_PATH = os.environ.get(
         'BIBLATP_REMOTE_PATH',

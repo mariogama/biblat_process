@@ -4,126 +4,102 @@ import subprocess
 import datetime
 import argparse
 
-from biblat_process.utils import settings, cformatter
+from biblat_process.utils import CustomFormatter
+from biblat_process.settings import config
 
-cformatter = cformatter()
+custom_formatter = CustomFormatter()
 
 
-class dumper():
-    host = "aleph@{}"
-    date = datetime.date.today().strftime('%d%m%y')
+class Dumper:
 
-    def __init__(self, test_config=None):
-        self.config = test_config or settings.get(u'app:main', {})
-        self.config['local_path'] = self.config['local_path']
+    def __init__(self):
+        self.date = datetime.datetime.now().strftime('%d%m%y')
+        self.limit_date = datetime.datetime.now().strftime('%Y%m01')
+        self.user_host = '{user}@{host}'.format(user=config.REMOTE_USER,
+                                                host=config.REMOTE_ADDR)
 
     def list_claper(self, base):
-        print('listclaperexecute')
-        lsqlScript = """
-set source_par = '{dlib}'
-source ${{alephm_proc}}/set_lib_env
-setenv PATH /exlibris/aleph/.local/bin:$PATH
-set dir='{remote_path}'
-set fentrada=sis{dlib}_{fecha}.lst
-cd $dir
-cat <<EOF > consulta.sql
-SET HEADING ON
-SET LINESIZE 14
-SET ECHO OFF
-SET FEEDBACK OFF
-SET PAUSE OFF
-SET NEWPAGE 0
-SET SPACE 0
-SET PAGESIZE 0
-SET TERMOUT OFF
-SET VERIFY OFF
-SPOOL $alephe_scratch/$fentrada
-SELECT substr(z13u_rec_key,1,9)||'{dlib!u}'
-FROM {dlib!u}.z13u
-WHERE z13u_user_defined_3_code is NULL
-ORDER BY substr(z13u_rec_key,1,9);
-SPOOL OFF
-EXIT
-EOF
-sqlplus {dlib}/{dlib} @consulta.sql
-exit
-"""
-        remote_path = self.config['remote_path']
-        remote_addr = self.config['remote_addr']
+        script = "set source_par = '{dlib}'\n" \
+                 "source ${{alephm_proc}}/set_lib_env\n" \
+                 "setenv PATH /exlibris/aleph/.local/bin:$PATH\n" \
+                 "set fentrada=sis{dlib}_{fecha}.lst\n" \
+                 "sqlplus {dlib}/{dlib} @/dev/stdin <<EOF\n" \
+                 "SET HEADING ON\n" \
+                 "SET LINESIZE 14\n" \
+                 "SET ECHO OFF\n" \
+                 "SET FEEDBACK OFF\n" \
+                 "SET PAUSE OFF\n" \
+                 "SET NEWPAGE 0\n" \
+                 "SET SPACE 0\n" \
+                 "SET PAGESIZE 0\n" \
+                 "SET TERMOUT OFF\n" \
+                 "SET VERIFY OFF\n" \
+                 "SPOOL $alephe_scratch/$fentrada\n" \
+                 "SELECT SUBSTR(Z13u_REC_KEY, 1, 9)||'{dlib!u}' " \
+                 "FROM {dlib!u}.Z13u INNER JOIN {dlib!u}.Z13 " \
+                 "ON (z13u_rec_key=z13_rec_key) " \
+                 "WHERE z13u_user_defined_3_code IS NULL " \
+                 "AND z13_upd_time_stamp < '{limit_date}' " \
+                 "ORDER BY SUBSTR(z13u_rec_key, 1, 9);\n" \
+                 "SPOOL OFF\n" \
+                 "EXIT\n" \
+                 "EOF\n"
+
         if base == 'per01':
-            lsqlScript += "\ngsed -r -i.bak -e '/^000200053/d' " \
-                          "$alephe_scratch/$fentrada"
-            lsqlScript += "\nrm $alephe_scratch/$fentrada.bak"
-        lsqlScript = cformatter.format(lsqlScript, dlib=base,
-                                       remote_path=remote_path,
-                                       fecha=self.date)
+            script += "gsed -i '/^000200053/d' $alephe_scratch/$fentrada\n"
 
-        host = self.host.format(remote_addr)
+        script = custom_formatter.format(script,
+                                         dlib=base,
+                                         limit_date=self.limit_date,
+                                         fecha=self.date)
 
-        ssh = subprocess.Popen(["ssh", host, "csh -s"],
+        ssh = subprocess.Popen(["ssh", self.user_host, "csh -s"],
                                shell=False,
                                stdin=subprocess.PIPE,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
-
-        ssh.communicate(lsqlScript.encode())
+        ssh.communicate(script.encode())
         ssh.wait()
 
     def dump_claper(self, base):
 
         self.list_claper(base)
-        print('dumpclaperexecute')
-        script = """
-set source_par = '{dlib}'
-source ${{alephm_proc}}/set_lib_env
-setenv PATH /exlibris/aleph/.local/bin:$PATH
-set dir='{remote_path}'
-set fentrada=sis{dlib}_{fecha}.lst
-set fsalida={dlib}json_{fecha}.txt
-cd $dir
-rm -rf $fsalida
-cd $aleph_proc
-csh -f p_print_03 {dlib!u},$fentrada,ALL,,,,,,,,$fsalida,A,,,,N
-mv $data_scratch/$fsalida $dir
-while ( ! -e $dir/$fsalida )
-    echo "no existe $fsalida"
-    sleep 1
-end
-echo "EOF" >> $dir/$fsalida
-echo `wc -l $alephe_scratch/$fentrada | awk '{{print $1}}'` >> $dir/$fsalida
-cd $dir
-gzip -9 $fsalida
-            """
-        remote_path = self.config['remote_path']
-        remote_addr = self.config['remote_addr']
-        lscript = cformatter.format(script, dlib=base,
-                                    remote_path=remote_path, fecha=self.date)
-        host = self.host.format(remote_addr)
+        script = "set source_par = '{dlib}'\n" \
+                 "source ${{alephm_proc}}/set_lib_env\n" \
+                 "set fentrada=sis{dlib}_{fecha}.lst\n" \
+                 "set fsalida={dlib}json_{fecha}.txt\n" \
+                 "cd {remote_path}\n" \
+                 "rm -rf $fsalida\n" \
+                 "csh -f $aleph_proc/p_print_03 {dlib!u},$fentrada,ALL,,,,,,,,$fsalida,A,,,,N\n" \
+                 "echo 'EOF' >> $data_scratch/$fsalida\n" \
+                 "echo `wc -l $alephe_scratch/$fentrada | awk '{{print $1}}'` >> $data_scratch/$fsalida\n" \
+                 "gzip -c $data_scratch/$fsalida > $fsalida.gz\n" \
+                 "rm $data_scratch/$fsalida\n"
 
-        ssh = subprocess.Popen(["ssh", host, "csh -s"],
+        script = custom_formatter.format(script,
+                                         dlib=base,
+                                         remote_path=config.REMOTE_PATH,
+                                         fecha=self.date)
+
+        ssh = subprocess.Popen(["ssh", self.user_host, "csh -s"],
                                shell=False,
                                stdin=subprocess.PIPE,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
-        ssh.communicate(lscript.encode())
+        ssh.communicate(script.encode())
         ssh.wait()
 
         self.pull_claper(base)
 
     def pull_claper(self, base):
-        print('pullclaperexecute')
-        local_path = self.config['local_path']
-        remote_path = self.config['remote_path']
-        remote_addr = self.config['remote_addr']
-        cmd = "cat {remote_path}/{dlib}json_{fecha}.txt.gz" \
-            .format(remote_path=remote_path, dlib=base, fecha=self.date)
-        output_file = open('{local_path}/{dlib}_valid.txt.gz'.format(
-            local_path=local_path, dlib=base), 'w')
+        cmd = "cat {remote_path}/{dlib}json_{fecha}.txt.gz".format(
+            remote_path=config.REMOTE_PATH,
+            dlib=base,
+            fecha=self.date)
+        output_file = open('{local_path}/{dlib}.txt.gz'.format(
+            local_path=config.LOCAL_PATH, dlib=base), 'w')
 
-        host = self.host.format(remote_addr)
-
-        ssh = subprocess.Popen(["ssh",
-                                host, cmd],
+        ssh = subprocess.Popen(["ssh", self.user_host, cmd],
                                shell=False,
                                stdout=output_file)
         ssh.wait()
@@ -139,34 +115,35 @@ def main():
         '--periodica',
         action='store_true',
         dest='periodica',
-        help='Procesando periodica'
+        help='Procesando PERIÓDICA'
     )
 
     parser.add_argument(
         '--all',
-
         action='store_true',
         dest='all',
-        help='Procesando periodica y clase'
+        help='Procesando CLASE y PERIÓDICA'
     )
 
     parser.add_argument(
         '--clase',
         action='store_true',
         dest='clase',
-        help='Procesando clase'
+        help='Procesando CLASE'
     )
     args = parser.parse_args()
 
-    d = dumper()
+    d = Dumper()
 
     if args.periodica:
-
         d.dump_claper('per01')
 
     elif args.clase:
-
         d.dump_claper('cla01')
     else:
         d.dump_claper('cla01')
         d.dump_claper('per01')
+
+
+if __name__ == "__main__":
+    main()
