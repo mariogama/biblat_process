@@ -23,9 +23,8 @@ setup(
     dependency_links=[],
     test_suite='tests.discover_suite',
     entry_points={
-        
         'console_scripts': [
-        'harvest=biblat_process.marc_dump:main',
+        'claper_dump=biblat_process.marc_dump:main',
         ],
     },
 )

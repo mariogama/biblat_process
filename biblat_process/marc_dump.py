@@ -1,24 +1,30 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import subprocess
-import datetime
 import argparse
+import datetime
+import logging
+import subprocess
 
 from biblat_process.utils import CustomFormatter
 from biblat_process.settings import config
 
+logger = logging.getLogger('claper_dump')
 custom_formatter = CustomFormatter()
+
+UNTIL = datetime.datetime.now().strftime('%Y%m01')
+LOGGER_FMT = '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
 
 
 class Dumper:
 
-    def __init__(self):
+    def __init__(self, until_date=UNTIL):
         self.date = datetime.datetime.now().strftime('%d%m%y')
-        self.limit_date = datetime.datetime.now().strftime('%Y%m01')
+        self.limit_date = until_date
         self.user_host = '{user}@{host}'.format(user=config.REMOTE_USER,
                                                 host=config.REMOTE_ADDR)
 
     def list_claper(self, base):
+        logger.info('Generando listado de %s' % base.upper())
         script = "set source_par = '{dlib}'\n" \
                  "source ${{alephm_proc}}/set_lib_env\n" \
                  "setenv PATH /exlibris/aleph/.local/bin:$PATH\n" \
@@ -62,7 +68,7 @@ class Dumper:
         ssh.wait()
 
     def dump_claper(self, base):
-
+        logger.info('Iniciando respaldo de %s' % base.upper())
         self.list_claper(base)
         script = "set source_par = '{dlib}'\n" \
                  "source ${{alephm_proc}}/set_lib_env\n" \
@@ -81,6 +87,7 @@ class Dumper:
                                          remote_path=config.REMOTE_PATH,
                                          fecha=self.date)
 
+        logger.info('Realizando respaldo de %s' % base.upper())
         ssh = subprocess.Popen(["ssh", self.user_host, "csh -s"],
                                shell=False,
                                stdin=subprocess.PIPE,
@@ -92,6 +99,7 @@ class Dumper:
         self.pull_claper(base)
 
     def pull_claper(self, base):
+        logger.info('Descargando respaldo de %s' % base.upper())
         cmd = "cat {remote_path}/{dlib}json_{fecha}.txt.gz".format(
             remote_path=config.REMOTE_PATH,
             dlib=base,
@@ -112,10 +120,25 @@ def main():
     )
 
     parser.add_argument(
-        '--periodica',
+        '--logging_level',
+        '-l',
+        default='INFO',
+        choices=['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'],
+        help='Logging level'
+    )
+
+    parser.add_argument(
+        '--until_date',
+        '-u',
+        default=UNTIL,
+        help='Fecha en formato ISO como %s' % UNTIL
+    )
+
+    parser.add_argument(
+        '--clase',
         action='store_true',
-        dest='periodica',
-        help='Procesando PERIÓDICA'
+        dest='clase',
+        help='Procesando CLASE'
     )
 
     parser.add_argument(
@@ -126,18 +149,22 @@ def main():
     )
 
     parser.add_argument(
-        '--clase',
+        '--periodica',
         action='store_true',
-        dest='clase',
-        help='Procesando CLASE'
+        dest='periodica',
+        help='Procesando PERIÓDICA'
     )
+
     args = parser.parse_args()
 
-    d = Dumper()
+    logging.basicConfig(
+        level=getattr(logging, args.logging_level.upper(), 'INFO'),
+        format=LOGGER_FMT)
+
+    d = Dumper(until_date=args.until_date)
 
     if args.periodica:
         d.dump_claper('per01')
-
     elif args.clase:
         d.dump_claper('cla01')
     else:
