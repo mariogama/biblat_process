@@ -21,7 +21,8 @@ class Config:
         'BIBLATP_REMOTE_PATH',
         '/exlibris/aleph/a21_1/alephm/sql_report/anexo/biblat_process'
     )
-    LOCAL_PATH = os.environ.get('BIBLATP_LOCAL_PATH', '../data')
+    LOCAL_PATH = os.environ.get('BIBLATP_LOCAL_PATH',
+                                os.path.join(SCRIPT_PATH, '../data'))
     DB_FILES = ['cla01.txt.gz', 'per01.txt.gz']
 
 
