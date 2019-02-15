@@ -3,6 +3,7 @@
 import argparse
 import datetime
 import logging
+import os
 import subprocess
 
 from biblat_process.utils import CustomFormatter
@@ -66,10 +67,10 @@ class Dumper:
                                stderr=subprocess.PIPE)
         ssh.communicate(script.encode())
         ssh.wait()
+        logger.info('Listado de %s generado' % base.upper())
 
     def dump_claper(self, base):
-        logger.info('Iniciando respaldo de %s' % base.upper())
-        self.list_claper(base)
+        logger.info('Generando respaldo de %s' % base.upper())
         script = "set source_par = '{dlib}'\n" \
                  "source ${{alephm_proc}}/set_lib_env\n" \
                  "set fentrada=sis{dlib}_{fecha}.lst\n" \
@@ -87,7 +88,6 @@ class Dumper:
                                          remote_path=config.REMOTE_PATH,
                                          fecha=self.date)
 
-        logger.info('Realizando respaldo de %s' % base.upper())
         ssh = subprocess.Popen(["ssh", self.user_host, "csh -s"],
                                shell=False,
                                stdin=subprocess.PIPE,
@@ -95,8 +95,7 @@ class Dumper:
                                stderr=subprocess.PIPE)
         ssh.communicate(script.encode())
         ssh.wait()
-
-        self.pull_claper(base)
+        logger.info('Respaldo de %s generado' % base.upper())
 
     def pull_claper(self, base):
         logger.info('Descargando respaldo de %s' % base.upper())
@@ -112,6 +111,10 @@ class Dumper:
                                stdout=output_file)
         ssh.wait()
         output_file.close()
+        logger.info(
+            'Respaldo de %s descargado en %s' %
+            (base.upper(), output_file.name)
+        )
 
 
 def main():
@@ -138,21 +141,22 @@ def main():
         '--clase',
         action='store_true',
         dest='clase',
-        help='Procesando CLASE'
-    )
-
-    parser.add_argument(
-        '--all',
-        action='store_true',
-        dest='all',
-        help='Procesando CLASE y PERIÓDICA'
+        help='Procesar solo CLASE'
     )
 
     parser.add_argument(
         '--periodica',
         action='store_true',
         dest='periodica',
-        help='Procesando PERIÓDICA'
+        help='Procesar solo PERIÓDICA'
+    )
+
+    parser.add_argument(
+        '--exec',
+        '-e',
+        default='all',
+        choices=['list', 'dump', 'pull', 'all'],
+        help='Seleccione proceso a ejecutar'
     )
 
     args = parser.parse_args()
@@ -162,14 +166,23 @@ def main():
         format=LOGGER_FMT)
 
     d = Dumper(until_date=args.until_date)
+    bases = ['cla01', 'per01']
+
+    if args.clase:
+        bases = ['cla01']
 
     if args.periodica:
-        d.dump_claper('per01')
-    elif args.clase:
-        d.dump_claper('cla01')
-    else:
-        d.dump_claper('cla01')
-        d.dump_claper('per01')
+        bases = ['per01']
+
+    for base in bases:
+        if args.exec in ('list', 'all'):
+            d.list_claper(base)
+
+        if args.exec in ('dump', 'all'):
+            d.dump_claper(base)
+
+        if args.exec in ('pull', 'all'):
+            d.pull_claper(base)
 
 
 if __name__ == "__main__":
